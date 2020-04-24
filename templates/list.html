@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Super Sprinter 3000</title>
+    </head>
+    <body>
+        <h1>Super Sprinter 3000</h1>
+        <a href="/story"><button>Add a new user story</button></a>
+        <table>
+              <tr>
+                  {% for item in table_header %}
+                <th>{{item}}</th>
+                  {% endfor %}
+              </tr>
+                     {% for user in user_stories %}
+              <tr>
+
+                <td>{{user['id']}}</td>
+                <td><a href="/story/{{ user['id'] }}">{{user['title']}}</td>
+                  <td>{{user['user_story']}}</td>
+                  <td>{{user['acceptance_criteria']}}</td>
+                  <td>{{user['business_value']}}</td>
+                  <td>{{user['estimation']}}</td>
+                  <td>{{user['status']}}</td>
+
+              </tr>
+                {% endfor %}
+        </table>
+
+
+    </body>
+</html>

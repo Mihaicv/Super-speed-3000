@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add user Story</title>
+</head>
+<body>
+    <h1>Add user story</h1>
+    <form action="/story" method="POST">
+
+        <label for="title">Title</label><br>
+        <input id="title" type="text" name="title" minlength="5"><br><br>
+
+        <label for="user_story">User Story</label><br>
+        <textarea id="user_story" name="user_story"></textarea><br><br>
+
+        <label for="acceptance_criteria">Acceptance Criteria</label><br>
+        <textarea id="acceptance_criteria" name="acceptance_criteria"> </textarea><br><br>
+
+        <label for="business_value">Business Value</label><br>
+        <input id="business_value" type="number" name="business_value" step="100" min="100" max="1500"><br><br>
+
+        <label for="estimation">	Estimation</label><br>
+        <input id="estimation" type="number" name="estimation" step="0.5" min="0.5" max="40"> <br><br>
+        <button type="submit" style="color:red;">Add user story</button>
+
+    </form>
+</body>
+</html>
